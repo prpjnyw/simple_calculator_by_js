@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<htlm>
+    <head>
+        <title>puiiiiii</title>
+        <style>
+            body {
+                background-color: black;
+                font-family: Arial;
+            }
+            
+            .css-para0 {
+                color: white;
+                font-size: large;
+            }
+
+            .num-btn {
+                border: none; 
+                padding: 15px 19px;
+                background-color: #333333; 
+                color: white;
+                border-radius: 150px;
+            }
+
+            .opt-btn {
+                border: none; 
+                padding: 15px 19px;
+                background-color: #fda013; 
+                color: white;
+                border-radius: 150px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p class="insert-num css-para0"></p>
+        <p class="row-1">
+            <button onclick="
+                insert.innerHTML += '1' ; 
+                " class="num-btn">1</button>
+
+            <button onclick="
+                insert.innerHTML += '2' ; 
+                " class="num-btn">2</button>
+
+            <button onclick="
+                insert.innerHTML += '3' ; 
+                " class="num-btn">3</button>
+
+            <button onclick="
+                insert.innerHTML += ' + ' ; 
+                " class="opt-btn">+</button>
+        </p>
+
+        <p class="row-2"></p>
+            <button onclick="
+                insert.innerHTML += '4' ; 
+                " class="num-btn">4</button>
+            <button onclick="
+                insert.innerHTML += '5' ; 
+                " class="num-btn">5</button>
+            <button onclick="
+                insert.innerHTML += '6' ; 
+                "class= 'num-btn'>6</button>
+            <button onclick="
+                insert.innerHTML += ' - ' ; 
+                " class="opt-btn">-</button>
+        </p>
+            <button onclick="
+                insert.innerHTML += '7' ; 
+                " class="num-btn">7</button>
+
+            <button onclick="
+                insert.innerHTML += '8' ; 
+                " class="num-btn">8</button>
+
+            <button onclick="
+                insert.innerHTML += '9' ; 
+                " class="num-btn">9</button>
+
+            <button onclick="
+                insert.innerHTML += ' * ' ; 
+                " class="opt-btn">*</button>
+        <p class="row-3">
+        </p>
+
+        <p class="row-4"></p>
+            <button onclick="
+                insert.innerHTML += '0' ; 
+                " class="num-btn">0</button>
+            <button onclick="
+                insert.innerHTML += '.';
+            " class="num-btn">.</button>
+            <button onclick="
+                let text = insert.innerHTML.split(' '); 
+                let x = Number(text[0]) ;
+                let y = Number(text[2]) ;
+
+                if(text[1] === '+') {
+                    insert.innerHTML = x + y ;
+                }else if(text[1] === '-') {
+                    insert.innerHTML = x - y ;
+                }else if(text[1] === '*') {
+                    insert.innerHTML = x * y ;
+                }else if(text[1] === '/') {
+                    if(y !== 0) {
+                        insert.innerHTML = x / y ;
+                    }else {
+                        insert.innerHTML = 'syntax error';
+                    }
+                }
+
+            " class="num-btn">=</button>
+            <button onclick="
+                insert.innerHTML += ' / ' ; 
+            " class="opt-btn">/</button>
+        </p>
+
+        <p><button onclick="
+            insert.innerHTML = ''; 
+        " class="num-btn">clear</button></p>
+
+        <script>
+            const insert = document.querySelector('.insert-num');            
+            let anw = 0;
+            
+
+        </script>
+    </body>
+</htlm>
